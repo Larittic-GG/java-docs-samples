@@ -29,7 +29,7 @@ import java.util.Arrays;
 
 public class ListAssetsExample {
 
-  public static void listAssets() throws Exception {
+  static void listAssets() throws Exception {
     // The project id of the asset parent to list.
     String projectId = "YOUR_PROJECT_ID";
     // The asset types to list. E.g.,
@@ -44,7 +44,7 @@ public class ListAssetsExample {
     listAssets(projectId, assetTypes, contentType);
   }
 
-  public static void listAssets(String projectId, String[] assetTypes, ContentType contentType)
+  static void listAssets(String projectId, String[] assetTypes, ContentType contentType)
       throws Exception {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
